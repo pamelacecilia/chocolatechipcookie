@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+/*---RESET---*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+body {
+    background-color:#FAF3E3;
+}
+.grid-contenedor{
+    margin: 0 auto;
+    color: black;
+    font-family: 'Monserrat',sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 150px 150px auto 200px;
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "footer footer footer"
+    ;
+}
+
+/*---HEADER---*/
+.encabezado {
+    background-color: #F398A7;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.navbar{
+    grid-area: nav;
+}
+
+.encabezado nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+header nav ul li{
+    margin: 20px;
+}
+
+.encabezado nav div ul li a{
+    color: whitesmoke !important;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: bold;
+}
+
+/*---MAIN---*/
+.principal{
+grid-area: main;
+}
+
+.hero{
+    background-image: url("../img/fondotextocooki.jpg") ;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    color:black;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.hero h1{
+    font-weight: 700;
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: bold;
+}
+
+.hero p{
+    font-size: 35px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nuestra-cocina{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.nuestra-cocina div{
+    width: 50%;
+    margin: 40px;
+}
+
+.nuestra-cocina img{
+    width: 400px;
+    height: 500px;
+}
+.nuestra-cocina div h2 {
+    font-weight: 600;
+    font-size: 50px;
+    text-align: center;
+}
+
+.nuestra-cocina div p{
+    font-size: 25px;
+}
+
+.recetas div img{
+    width: 100%;
+    height: 400px;
+}
+
+.recetas div h3{
+    margin: 15px;
+}
+
+.recetas div a{
+    background-color: #D55F8F;
+    color: black;
+    padding: 5px;
+}
+
+.recetas div{
+    width: 500px;
+    height: 500px;
+    border: 1px black solid;
+    text-align: center;
+    margin: 15px;
+    display: inline-block;
+}
+
+/*---FOOTER---*/
+.pie{
+    grid-area: footer;
+    background-color: #D55F8F;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer div a img{
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+}
+
+/*---DULCE---*/
+
+.dulce-main{
+    background-image: url("../img/dulcemain.jpg");
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    color:white;
+    text-align: center;
+}
+
+.dulce-main h1{
+    font-weight: 700;
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: bold;
+    text-align: center;
+}
+
+/*---SALADO---*/
+.salado-main{
+    background-image: url("../img/saladomain.jpg");
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    color:white;
+    text-align: center;
+}
+
+.salado-main h1{
+    font-weight: 700;
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: bold;
+    text-align: center;
+}
+
+/*---VEGAN ---*/
+.vegan-main{
+    background-image: url("../img/veganmain.jpg");
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    color:white;
+    text-align: center;
+}
+
+.vegan-main h1{
+    font-weight: 700;
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: bold;
+    text-align: center;
+}
+
+/*! MEDIA QUERY */
+
+@media screen and (max-width:1050px){
+    .grid-contenedor{
+        width:100%;
+        margin:0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:150px 150px auto 150px;
+        grid-template-areas:
+        "header header"
+        "nav nav"
+        "main main"
+        "footer footer";
+    }
+}
+
+@media screen and (max-width:600px){
+    .grid-contenedor{
+        grid-template-columns: 1fr;
+        grid-template-rows:150px 150px auto 150px;
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    }
+    .pie{
+        flex-direction: column;
+    }
+}

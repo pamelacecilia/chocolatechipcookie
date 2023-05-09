@@ -3,10 +3,9 @@
 
 - 🔭 I’m currently working on **Chocolate Chip Cookie - recipes web**
 
-- 🌱 I’m currently learning **HTML, CSS, JavaScript**
-
-- 📫 How to reach me **pcc.pam@gmail.com**
-
+- 🌱 En este proyecto he estado trabajando la estructura principal en HTML, y luego el diseño con CSS
+Tiene un index como pagina principal y luego las paginas Recetas Dulces, Recetas Saladas, Recetas Vegan y un Contactanos con un form para dejar comentarios.
+El esqueleto esta trabajado con grid para la distribucion, el navbar esta hecho con Bootstrap, al igual que el formulario de contacto. Con las mediaquery lo he hecho responsive. 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 </p>

@@ -1,0 +1,28 @@
+.encabezado {
+    background-color: nth($color,3);
+    grid-area: header;
+    @include dispo (flex, space-between, center);
+    position: sticky;
+    top: 0;
+    nav div ul li a{
+        color: nth($color,1) !important;
+        font-size: 20px;
+        font-weight: 500;
+        font-style: bold;
+                        }
+    .navbar{
+        grid-area: nav;
+            nav{
+                div{
+                    ul{display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        position: sticky;
+                        top: 0;
+                        li{ margin: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

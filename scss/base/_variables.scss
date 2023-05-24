@@ -1,0 +1,23 @@
+//*LISTAS
+$color:
+#FAF3E3,
+#D55F8F,
+#F398A7,
+black;
+
+//*EXTENDS
+%flex{
+    width: 500px;
+    height: 500px;
+    border: 1px black solid;
+    text-align: center;
+    margin: 15px;
+    display: inline-block;
+}
+
+//*MIXINS
+@mixin dispo($flex, $justify, $align){
+display: $flex;
+justify-content: $justify;
+align-items: $align;
+}

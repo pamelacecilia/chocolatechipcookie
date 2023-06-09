@@ -1,5 +1,5 @@
 //*MEDIA QUERY
-@media screen and (max-width:1050px){
+@media screen and (max-width:1200px){
     .grid-contenedor{
         width:100%;
         margin:0;
@@ -10,8 +10,25 @@
         "nav nav"
         "main main"
         "footer footer";
+        .pie{
+            flex-direction: column;
+            div a img{
+                    width: 60px;
+                    height: 60px;
+                    margin: 10px;
+            }
+        }
     }
 }
+
+@media screen and (max-width:800px){
+    .grid-contenedor{
+        .nuestra-cocina{
+            flex-direction: column;
+        }
+    }
+}
+
 
 @media screen and (max-width:600px){
     .grid-contenedor{
@@ -24,6 +41,11 @@
         "footer";
         .pie{
             flex-direction: column;
+            div a img{
+                    width: 40px;
+                    height: 40px;
+                    margin: 10px;
+            }
         }
     }
 }

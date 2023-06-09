@@ -1,14 +1,15 @@
 //* MAIN
-    .principal{
+.principal{
         grid-area: main;
         .hero{
-            background-image: url("../img/fondotextocooki.jpg") ;
+            background-image: url("../img/portada.png") ;
             width: 100%;
             height: 400px;
             background-size: cover;
             color: nth($color,4);
             text-align: center;
             background-attachment: fixed;
+            margin: 20px;
             h1{
                 font-weight: 700;
                 font-size: 70px;
@@ -23,6 +24,7 @@
             .nuestra-cocina{
                 @include dispo (flex, center, center);
                 flex-direction: row-reverse;
+                margin: 10px;
                 img{
                     width: 400px;
                     height: 500px;
@@ -34,75 +36,136 @@
                         font-weight: 600;
                         font-size: 50px;
                         text-align: center;
+                        animation-name: slidein;
+                        animation-duration: 3s;
+                        animation-timing-function: ease-in-out;
+                        animation-direction: initial;
+                        animation-delay: 1s;
+                        animation-iteration-count: initial;
+                    }
+                    @keyframes slidein{
+                        from{
+                            margin-left: 100%;
+                            width: 300%;
+                        }
+                        to{
+                            margin-left: 0;
+                            width: 100%;
+                        }
                     }
                     p{
                         font-size: 25px;
                     }
                 }
             }
-            .recetas{
+
+        .recetas{
+                    display: flex;
+                    display: inline-block;
                 h2{
                     font-weight: 600;
                     font-size: 30px;
                     text-align: center;
                 }
-                div{
-                    @extend %flex;
+                .recetadispo{
+                    div{
+                        width: 400px;
+                        height:500px;
+                        @extend %flex;
+                        margin: 30px;
                         img{
+                            padding: 10px;
                             width: 100%;
                             height: 400px;
                             }
-                    h3{
+                        h3{
                         font-size: 18px;
                         margin: 15px;
-                    }
-                    a{
+                        }
+                        a{
                         background-color: nth($color,2);
                         color: nth($color,4);
                         padding: 5px;
+                        margin: 5px;
+                        }
+                        }
                     }
-                }
+                    .recetadispo div:hover{
+                        background-color:#ABE086 ;
+                    }
             }
     }
 
-
 //*DULCE
-main{
 .dulce-main{
-        background-image: url("../img/dulcemain.jpg");
-        width: 100%;
-        height: 300px;
-        background-size: cover;
-        color: nth($color,1);
+
+            background-image: url("../img/dulcemain.jpg");
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            animation-name: slidein;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-direction: initial;
+            animation-delay: 1s;
+            animation-iteration-count: initial;
+        @keyframes slidein{
+            from{
+                margin-left: 100%;
+                width: 300%;
+            }
+            to{
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+            color: nth($color,1);
+            text-align: center;
+                h1{
+                    font-weight: 700;
+                    font-size: 70px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-style: bold;
+                    text-align: center;
+                }
+            } 
+main .recetas{
+    display: flex;
+    display: inline;
+    h2{
+        font-weight: 600;
+        font-size: 30px;
         text-align: center;
-            h1{
-                font-weight: 700;
-                font-size: 70px;
-                font-family: 'Montserrat', sans-serif;
-                font-style: bold;
-                text-align: center;
-            }
-        }
-        .recetas{
+    }
+    .recetadispo{
+        div{
+            width: 350px;
+            height:500px;
             @extend %flex;
-                        img{
-                            width: 100%;
-                            height: 400px;
-                            }
-                    h3{
-                        font-size: 18px;
-                        margin: 15px;
-                    }
-                    a{
-                        background-color: nth($color,2);
-                        color: nth($color,4);
-                        padding: 5px;
-                    }
+            margin: 15px;
+            img{
+                padding: 10px;
+                width: 100%;
+                height: 400px;
+                }
+            h3{
+            font-size: 18px;
+            margin: 15px;
+            }
+            a{
+            background-color: nth($color,2);
+            color: nth($color,4);
+            padding: 5px;
+            margin: 5px;
             }
         }
+}
+.recetadispo div:hover{
+    background-color:#ABE086 ;
+}
+}
 
 //*SALADO
-main{
     .salado-main{
         background-image: url("../img/saladomain.jpg");
         width: 100%;
@@ -110,6 +173,23 @@ main{
         background-size: cover;
         color: nth($color,1);
         text-align: center;
+        animation-name: slidein;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-direction: initial;
+        animation-delay: 1s;
+        animation-iteration-count: initial;
+    @keyframes slidein{
+        from{
+            margin-left: 100%;
+            width: 300%;
+        }
+        to{
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
             h1{
                 font-weight: 700;
                 font-size: 70px;
@@ -117,27 +197,44 @@ main{
                 font-style: bold;
                 text-align: center;
             }
-    }  
-    .recetas{
-        @extend %flex;
-            img{
-                width: 100%;
-                height: 400px;
+    }
+    main .recetas{
+        display: flex;
+        display: inline;
+        h2{
+            font-weight: 600;
+            font-size: 30px;
+            text-align: center;
+        }
+        .recetadispo{
+            div{
+                width: 350px;
+                height:500px;
+                @extend %flex;
+                margin: 15px;
+                img{
+                    padding: 10px;
+                    width: 100%;
+                    height: 400px;
+                    }
+                h3{
+                font-size: 18px;
+                margin: 15px;
                 }
-        h3{
-            font-size: 18px;
-            margin: 15px;
-        }
-        a{
-            background-color: nth($color,2);
-            color: nth($color,4);
-            padding: 5px;
-        }
-}
-} 
+                a{
+                background-color: nth($color,2);
+                color: nth($color,4);
+                padding: 5px;
+                margin: 5px;
+                }
+            }
+    }
+    .recetadispo div:hover{
+        background-color:#ABE086 ;
+    }
+    }
 
 //*VEGAN
-main{
     .vegan-main{
         background-image: url("../img/veganmain.jpg");
         width: 100%;
@@ -145,6 +242,23 @@ main{
         background-size: cover;
         color: nth($color,1);
         text-align: center;
+        animation-name: slidein;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-direction: initial;
+        animation-delay: 1s;
+        animation-iteration-count: initial;
+    @keyframes slidein{
+        from{
+            margin-left: 100%;
+            width: 300%;
+        }
+        to{
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
             h1{
                 font-weight: 700;
                 font-size: 70px;
@@ -153,20 +267,48 @@ main{
                 text-align: center;
             }
         }
-        .recetas{
-            @extend %flex;
-                img{
-                    width: 100%;
-                    height: 400px;
-                    }
-            h3{
-                font-size: 18px;
-                margin: 15px;
+        .recetadispo div:hover{
+            background-color:#ABE086 ;
+        }
+
+//*CONTACTO
+    .contactmain{
+        background-image: url("../img/patternpastel.jpg");
+        width: 100%;
+        height: 700px;
+        .h1{font-weight: 700;
+            font-size: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-style: bold;
+            text-align: center;
             }
-            a{
-                background-color: nth($color,2);
-                color: nth($color,4);
-                padding: 5px;
+        .h2{
+            font-weight: 600;
+            font-size: 25px;
+            text-align: center;
+            }
+        .mb-3 label {
+            margin: 10px;
+            font-weight: 500;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            font-style: bold;
+            text-align: center;
+            }
+       .mb-3{
+        margin: 10px;
+        width: 50%;
+            }
+        button{
+        display: center;
+        border-radius: 4px;
+        background-color: nth($color,1);
+        border: none;
+        color:nth($color,4);
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 200px;
+        margin: 20px;
             }
     }
-}

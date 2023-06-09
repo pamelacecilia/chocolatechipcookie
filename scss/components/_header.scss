@@ -4,6 +4,9 @@
     @include dispo (flex, space-between, center);
     position: sticky;
     top: 0;
+    .navbar-brand{
+        margin:15px;
+    }
     nav div ul li a{
         color: nth($color,1) !important;
         font-size: 20px;

@@ -1,6 +1,10 @@
 .pie{
         grid-area: footer;
         background-color: nth($color,2);
+        position: relative;
+        bottom: 0;
+        width:100%;
+        margin:10px;
         @include dispo (flex, space-evenly, center);
         div{
             a{
@@ -10,5 +14,13 @@
                     margin: 30px;
                 }
             }
+        }
+        div p{
+                font-weight: 200;
+                color: nth($color,1);
+                font-size: 20px;
+                font-family: 'Montserrat', sans-serif;
+                font-style: bold;
+                text-align: center;
         }
     }
